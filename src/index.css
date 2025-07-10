@@ -1,0 +1,142 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import the custom fonts */
+
+
+/* Definition of the design system with romantic love theme colors */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 350 89% 60%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 340 40% 96.1%;
+    --secondary-foreground: 350 47.4% 11.2%;
+
+    --muted: 340 40% 96.1%;
+    --muted-foreground: 346 16.3% 46.9%;
+
+    --accent: 340 40% 96.1%;
+    --accent-foreground: 350 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 31.8% 91.4%;
+    --input: 340 31.8% 91.4%;
+    --ring: 350 84% 4.9%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 340 0% 98%;
+    --sidebar-foreground: 340 5.3% 26.1%;
+    --sidebar-primary: 350 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 340 4.8% 95.9%;
+    --sidebar-accent-foreground: 350 5.9% 10%;
+    --sidebar-border: 340 13% 91%;
+    --sidebar-ring: 350 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 350 84% 4.9%;
+    --foreground: 340 40% 98%;
+
+    --card: 350 84% 4.9%;
+    --card-foreground: 340 40% 98%;
+
+    --popover: 350 84% 4.9%;
+    --popover-foreground: 340 40% 98%;
+
+    --primary: 340 40% 98%;
+    --primary-foreground: 350 47.4% 11.2%;
+
+    --secondary: 350 32.6% 17.5%;
+    --secondary-foreground: 340 40% 98%;
+
+    --muted: 350 32.6% 17.5%;
+    --muted-foreground: 340 20.2% 65.1%;
+
+    --accent: 350 32.6% 17.5%;
+    --accent-foreground: 340 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 340 40% 98%;
+
+    --border: 350 32.6% 17.5%;
+    --input: 350 32.6% 17.5%;
+    --ring: 340 26.8% 83.9%;
+    --sidebar-background: 350 5.9% 10%;
+    --sidebar-foreground: 340 4.8% 95.9%;
+    --sidebar-primary: 350 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 350 3.7% 15.9%;
+    --sidebar-accent-foreground: 340 4.8% 95.9%;
+    --sidebar-border: 350 3.7% 15.9%;
+    --sidebar-ring: 350 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 50%, #f3e8ff 100%);
+    min-height: 100vh;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/20 backdrop-blur-md border border-white/30;
+  }
+
+  .romantic-gradient {
+    background: linear-gradient(135deg, #fce7f3 0%, #f3e8ff 50%, #e0e7ff 100%);
+  }
+
+  .love-button {
+    @apply bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-medium px-4 py-2 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105;
+  }
+}
+
+/* Custom scrollbar for the romantic theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ec4899, #f43f5e);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #db2777, #e11d48);
+}
